@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		01CC36A41C9AEF1100797277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC36A31C9AEF1100797277 /* AppDelegate.swift */; };
-		01CC36A61C9AEF1100797277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC36A51C9AEF1100797277 /* ViewController.swift */; };
 		01CC36A91C9AEF1100797277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CC36A71C9AEF1100797277 /* Main.storyboard */; };
 		01CC36AB1C9AEF1100797277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CC36AA1C9AEF1100797277 /* Assets.xcassets */; };
 		01CC36AE1C9AEF1100797277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CC36AC1C9AEF1100797277 /* LaunchScreen.storyboard */; };
 		01CC36B91C9AEF1100797277 /* _1_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC36B81C9AEF1100797277 /* _1_dayTests.swift */; };
 		01CC36C41C9AEF1100797277 /* _1_dayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC36C31C9AEF1100797277 /* _1_dayUITests.swift */; };
+		01CC36D41C9B07DA00797277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC36D31C9B07DA00797277 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		01CC36A01C9AEF1100797277 /* 01-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CC36A31C9AEF1100797277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01CC36A51C9AEF1100797277 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01CC36A81C9AEF1100797277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01CC36AA1C9AEF1100797277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01CC36AD1C9AEF1100797277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		01CC36BF1C9AEF1100797277 /* 01-dayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-dayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CC36C31C9AEF1100797277 /* _1_dayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _1_dayUITests.swift; sourceTree = "<group>"; };
 		01CC36C51C9AEF1100797277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01CC36D31C9B07DA00797277 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				01CC36A31C9AEF1100797277 /* AppDelegate.swift */,
-				01CC36A51C9AEF1100797277 /* ViewController.swift */,
+				01CC36D31C9B07DA00797277 /* ViewController.swift */,
 				01CC36A71C9AEF1100797277 /* Main.storyboard */,
 				01CC36AA1C9AEF1100797277 /* Assets.xcassets */,
 				01CC36AC1C9AEF1100797277 /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01CC36A61C9AEF1100797277 /* ViewController.swift in Sources */,
+				01CC36D41C9B07DA00797277 /* ViewController.swift in Sources */,
 				01CC36A41C9AEF1100797277 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +485,7 @@
 				01CC36CA1C9AEF1100797277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01CC36CB1C9AEF1100797277 /* Build configuration list for PBXNativeTarget "01-dayTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				01CC36CD1C9AEF1100797277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01CC36CE1C9AEF1100797277 /* Build configuration list for PBXNativeTarget "01-dayUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +503,7 @@
 				01CC36D01C9AEF1100797277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
