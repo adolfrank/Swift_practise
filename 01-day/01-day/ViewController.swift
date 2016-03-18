@@ -10,14 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
-    @IBOutlet weak var playBtn: UIButton!
-    @IBOutlet weak var stopBtn: UIButton!
+
     @IBOutlet weak var timeLable: UILabel!
+    @IBOutlet weak var controlBtn: UIButton!
     
     var Count = 0.0
     var Timer = NSTimer()
-    
+    var IsPlaying = false
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
@@ -29,25 +28,27 @@ class ViewController: UIViewController {
         
     }
 
-  
-    @IBAction func resetBtnClick(sender: AnyObject) {
+    @IBAction func resetBtnDidTouch(sender: AnyObject) {
         Count = 0.0
         timeLable.text = String(Count)
-        playBtn.enabled = true
-        stopBtn.enabled = true
     }
+  
+    
 
-    @IBAction func playBtnClick(sender: AnyObject) {
-        playBtn.enabled = false
-        stopBtn.enabled = true
-        Timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: ("timeUpdate"), userInfo: nil, repeats: true)
+    @IBAction func controlBtnDidTouch(sender: AnyObject) {
+        if (IsPlaying == false) {
+            Timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: ("timeUpdate"), userInfo: nil, repeats: true)
+            controlBtn.setImage(UIImage(named: "stop_btn"), forState: UIControlState.Normal)
+            controlBtn.backgroundColor = UIColor(red: 204/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
+            IsPlaying = true
+        } else {
+        Timer.invalidate()
+        controlBtn.setImage(UIImage(named: "play_btn"), forState: UIControlState.Normal)
+        controlBtn.backgroundColor = UIColor(red: 49/255.0, green: 104/255.0, blue: 250/255.0, alpha: 1.0)
+        IsPlaying = false
+        }
     }
     
-    @IBAction func stopBtnClick(sender: AnyObject) {
-        stopBtn.enabled = false
-        playBtn.enabled = true
-        Timer.invalidate()
-    }
     
     func timeUpdate(){
         Count += 0.1
