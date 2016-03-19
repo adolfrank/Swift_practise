@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e2P-U9-bnR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Nav Bar Contriller-->
         <scene sceneID="ZFt-yM-n9A">
             <objects>
-                <navigationController id="e2P-U9-bnR" sceneMemberID="viewController">
+                <navigationController id="e2P-U9-bnR" customClass="navBarContriller" customModule="_4_day" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="I9s-Eb-Dxh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -19,7 +19,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="wqN-bx-ojp" kind="relationship" relationship="rootViewController" id="ILW-ge-tiN"/>
+                        <segue destination="GoJ-0k-VTm" kind="relationship" relationship="rootViewController" id="7W0-ZZ-2F2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="any-Qt-qT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -27,34 +27,75 @@
             <point key="canvasLocation" x="-520" y="207"/>
         </scene>
         <!--SNAPCHAT-->
-        <scene sceneID="hiQ-5H-x7C">
+        <scene sceneID="dYJ-Pp-RGF">
             <objects>
-                <viewController id="wqN-bx-ojp" customClass="ViewController" customModule="_4_day" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="GoJ-0k-VTm" customClass="HomeViewController" customModule="_4_day" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Sm9-mC-wWq"/>
-                        <viewControllerLayoutGuide type="bottom" id="h50-W1-BBZ"/>
+                        <viewControllerLayoutGuide type="top" id="PxN-vI-uVB"/>
+                        <viewControllerLayoutGuide type="bottom" id="MJC-f4-NVf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lJi-TN-CpB">
+                    <view key="view" contentMode="scaleToFill" id="CYm-6p-C9a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8Q-sb-kyX">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLC-YY-T65">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="w8Q-sb-kyX" secondAttribute="trailing" id="8dG-p8-tC0"/>
-                            <constraint firstItem="h50-W1-BBZ" firstAttribute="top" secondItem="w8Q-sb-kyX" secondAttribute="bottom" id="Ewg-oM-2Uo"/>
-                            <constraint firstItem="w8Q-sb-kyX" firstAttribute="top" secondItem="Sm9-mC-wWq" secondAttribute="bottom" id="IIn-BR-XRB"/>
-                            <constraint firstItem="w8Q-sb-kyX" firstAttribute="leading" secondItem="lJi-TN-CpB" secondAttribute="leading" id="lpA-Zd-ULO"/>
+                            <constraint firstItem="MJC-f4-NVf" firstAttribute="top" secondItem="yLC-YY-T65" secondAttribute="bottom" id="TXx-5Z-7RL"/>
+                            <constraint firstAttribute="trailing" secondItem="yLC-YY-T65" secondAttribute="trailing" id="W1i-NA-C5y"/>
+                            <constraint firstItem="yLC-YY-T65" firstAttribute="leading" secondItem="CYm-6p-C9a" secondAttribute="leading" id="X5m-uQ-EM2"/>
+                            <constraint firstItem="yLC-YY-T65" firstAttribute="top" secondItem="CYm-6p-C9a" secondAttribute="top" id="u7W-Pc-jeO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SNAPCHAT" id="WZb-FI-cnI"/>
+                    <navigationItem key="navigationItem" title="SNAPCHAT" id="yrX-ni-28b"/>
+                    <connections>
+                        <outlet property="scrollView" destination="yLC-YY-T65" id="6tQ-zw-Hb8"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lme-Wk-QcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ht2-z4-dTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54.5" y="215.5"/>
+            <point key="canvasLocation" x="-26.5" y="206.5"/>
+        </scene>
+        <!--Left View Controller-->
+        <scene sceneID="f4b-0O-ev5">
+            <objects>
+                <tableViewController id="jJI-CX-Ayo" customClass="LeftViewController" customModule="_4_day" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="151" sectionHeaderHeight="28" sectionFooterHeight="28" id="zOj-cC-sbC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="151" id="JAG-6W-aj1">
+                                <rect key="frame" x="0.0" y="28" width="375" height="151"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JAG-6W-aj1" id="A7u-VD-Asb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-jQ-zMC">
+                                            <rect key="frame" x="166" y="8" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jJI-CX-Ayo" id="Yhi-CS-rPl"/>
+                            <outlet property="delegate" destination="jJI-CX-Ayo" id="LOx-GB-gkB"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obM-XG-lE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.5" y="999.5"/>
         </scene>
     </scenes>
 </document>

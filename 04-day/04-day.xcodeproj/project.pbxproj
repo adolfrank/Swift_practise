@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		01460FD71C9C426600298FB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01460FD61C9C426600298FB5 /* AppDelegate.swift */; };
-		01460FD91C9C426600298FB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01460FD81C9C426600298FB5 /* ViewController.swift */; };
 		01460FDC1C9C426600298FB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01460FDA1C9C426600298FB5 /* Main.storyboard */; };
 		01460FDE1C9C426600298FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01460FDD1C9C426600298FB5 /* Assets.xcassets */; };
 		01460FE11C9C426600298FB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01460FDF1C9C426600298FB5 /* LaunchScreen.storyboard */; };
 		01460FEC1C9C426600298FB5 /* _4_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01460FEB1C9C426600298FB5 /* _4_dayTests.swift */; };
 		01460FF71C9C426600298FB5 /* _4_dayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01460FF61C9C426600298FB5 /* _4_dayUITests.swift */; };
-		014610061C9C433600298FB5 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014610041C9C433600298FB5 /* LeftViewController.swift */; };
-		014610071C9C433600298FB5 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014610051C9C433600298FB5 /* LeftViewController.xib */; };
-		0146100A1C9C434500298FB5 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014610081C9C434500298FB5 /* RightViewController.swift */; };
-		0146100B1C9C434500298FB5 /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014610091C9C434500298FB5 /* RightViewController.xib */; };
+		0146100D1C9C660D00298FB5 /* navBarContriller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146100C1C9C660D00298FB5 /* navBarContriller.swift */; };
+		014610141C9C6A1B00298FB5 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014610121C9C6A1B00298FB5 /* RightViewController.swift */; };
+		014610151C9C6A1B00298FB5 /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014610131C9C6A1B00298FB5 /* RightViewController.xib */; };
+		014610171C9C6A3E00298FB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014610161C9C6A3E00298FB5 /* HomeViewController.swift */; };
+		0146101F1C9CDC8B00298FB5 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146101E1C9CDC8B00298FB5 /* LeftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 /* Begin PBXFileReference section */
 		01460FD31C9C426600298FB5 /* 04-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01460FD61C9C426600298FB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01460FD81C9C426600298FB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01460FDB1C9C426600298FB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01460FDD1C9C426600298FB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01460FE01C9C426600298FB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,10 +50,11 @@
 		01460FF21C9C426600298FB5 /* 04-dayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "04-dayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01460FF61C9C426600298FB5 /* _4_dayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4_dayUITests.swift; sourceTree = "<group>"; };
 		01460FF81C9C426600298FB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		014610041C9C433600298FB5 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
-		014610051C9C433600298FB5 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
-		014610081C9C434500298FB5 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
-		014610091C9C434500298FB5 /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewController.xib; sourceTree = "<group>"; };
+		0146100C1C9C660D00298FB5 /* navBarContriller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navBarContriller.swift; sourceTree = "<group>"; };
+		014610121C9C6A1B00298FB5 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		014610131C9C6A1B00298FB5 /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewController.xib; sourceTree = "<group>"; };
+		014610161C9C6A3E00298FB5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0146101E1C9CDC8B00298FB5 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				01460FD61C9C426600298FB5 /* AppDelegate.swift */,
-				01460FD81C9C426600298FB5 /* ViewController.swift */,
-				014610041C9C433600298FB5 /* LeftViewController.swift */,
-				014610051C9C433600298FB5 /* LeftViewController.xib */,
-				014610081C9C434500298FB5 /* RightViewController.swift */,
-				014610091C9C434500298FB5 /* RightViewController.xib */,
+				0146100C1C9C660D00298FB5 /* navBarContriller.swift */,
+				014610161C9C6A3E00298FB5 /* HomeViewController.swift */,
 				01460FDA1C9C426600298FB5 /* Main.storyboard */,
+				0146101E1C9CDC8B00298FB5 /* LeftViewController.swift */,
+				014610121C9C6A1B00298FB5 /* RightViewController.swift */,
+				014610131C9C6A1B00298FB5 /* RightViewController.xib */,
 				01460FDD1C9C426600298FB5 /* Assets.xcassets */,
 				01460FDF1C9C426600298FB5 /* LaunchScreen.storyboard */,
 				01460FE21C9C426600298FB5 /* Info.plist */,
@@ -245,8 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01460FE11C9C426600298FB5 /* LaunchScreen.storyboard in Resources */,
-				0146100B1C9C434500298FB5 /* RightViewController.xib in Resources */,
-				014610071C9C433600298FB5 /* LeftViewController.xib in Resources */,
+				014610151C9C6A1B00298FB5 /* RightViewController.xib in Resources */,
 				01460FDE1C9C426600298FB5 /* Assets.xcassets in Resources */,
 				01460FDC1C9C426600298FB5 /* Main.storyboard in Resources */,
 			);
@@ -273,10 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				014610061C9C433600298FB5 /* LeftViewController.swift in Sources */,
-				0146100A1C9C434500298FB5 /* RightViewController.swift in Sources */,
-				01460FD91C9C426600298FB5 /* ViewController.swift in Sources */,
+				014610171C9C6A3E00298FB5 /* HomeViewController.swift in Sources */,
+				014610141C9C6A1B00298FB5 /* RightViewController.swift in Sources */,
 				01460FD71C9C426600298FB5 /* AppDelegate.swift in Sources */,
+				0146101F1C9CDC8B00298FB5 /* LeftViewController.swift in Sources */,
+				0146100D1C9C660D00298FB5 /* navBarContriller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +501,7 @@
 				01460FFD1C9C426600298FB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01460FFE1C9C426600298FB5 /* Build configuration list for PBXNativeTarget "04-dayTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +510,7 @@
 				014610001C9C426600298FB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		014610011C9C426600298FB5 /* Build configuration list for PBXNativeTarget "04-dayUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +519,7 @@
 				014610031C9C426600298FB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

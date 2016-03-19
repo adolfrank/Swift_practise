@@ -2,34 +2,52 @@
 //  LeftViewController.swift
 //  04-day
 //
-//  Created by Adolfrank on 3/18/16.
+//  Created by Adolfrank on 3/19/16.
 //  Copyright © 2016 FrankAdol. All rights reserved.
 //
 
 import UIKit
 
-class LeftViewController: UIViewController {
-
+class LeftViewController: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        self.tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
+        
+        self.tableView.rowHeight = 160
+        // self.tableView.separatorColor = UIColor.whiteColor()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
-    /*
-    // MARK: - Navigation
+    // MARK: - Table view data source
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
-    */
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 10
+    }
+
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        cell.textLabel?.text = "这是第\(indexPath.row)行"
+        cell.imageView?.image = UIImage(named: "screenshot")
+        
+        
+        
+        return cell
+    }
+
+
+    
+
+    
 
 }
