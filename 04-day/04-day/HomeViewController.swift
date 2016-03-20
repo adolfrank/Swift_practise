@@ -15,6 +15,10 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        self.navigationController?.hidesBarsOnSwipe = true
+        
         let leftView:LeftViewController = LeftViewController()
         let rightView:RightViewController = RightViewController(nibName:"RightViewController",bundle: nil)
         
@@ -30,6 +34,8 @@ class HomeViewController: UIViewController,UIScrollViewDelegate {
         
         self.scrollView.contentSize = CGSizeMake(scrollView.frame.width * 2, 0 )
         self.scrollView.delegate = self
+        
+//        self.scrollView.backgroundColor
     }
     
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
