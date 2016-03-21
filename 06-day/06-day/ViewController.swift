@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageFlewView: UICollectionView!
     
+    
     private var interests = data.createInterests()
     
     private struct Storyboard {
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
 extension ViewController : UICollectionViewDataSource {
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
