@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  05-day
 //
-//  Created by Hongbo Yu on 16/3/21.
-//  Copyright © 2016年 Frank. All rights reserved.
+//  Created by Adolfrank on 3/19/16.
+//  Copyright © 2016 FrankAdol. All rights reserved.
 //
 
 import UIKit
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // UIApplication.sharedApplication().statusBarHidden = true
         // Override point for customization after application launch.
         return true
     }

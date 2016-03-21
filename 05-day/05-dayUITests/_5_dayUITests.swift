@@ -2,8 +2,8 @@
 //  _5_dayUITests.swift
 //  05-dayUITests
 //
-//  Created by Hongbo Yu on 16/3/21.
-//  Copyright © 2016年 Frank. All rights reserved.
+//  Created by Adolfrank on 3/19/16.
+//  Copyright © 2016 FrankAdol. All rights reserved.
 //
 
 import XCTest

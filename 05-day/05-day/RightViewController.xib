@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RightViewController" customModule="_5_day" customModuleProvider="target">
+            <connections>
+                <outlet property="RightScrollView" destination="1U7-xM-jVz" id="e4v-ch-eu3"/>
+                <outlet property="RightView" destination="i5M-Pr-FkT" id="VCr-jR-ODG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="3cT-D7-JHE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" tag="30" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IYu-V3-PeC">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U7-xM-jVz">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-Gx-Irf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="64" id="EI0-q4-ryt"/>
+                                    </constraints>
+                                    <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <textAttributes key="titleTextAttributes">
+                                        <color key="textColor" red="0.62352941179999999" green="0.25490196079999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </textAttributes>
+                                    <items>
+                                        <navigationItem title="Stories" id="RFB-Au-gYJ">
+                                            <barButtonItem key="leftBarButtonItem" image="arrow" id="DBV-Vq-ChV">
+                                                <connections>
+                                                    <action selector="backBtnDidTouch:" destination="-1" id="s79-Ln-hkn"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </navigationItem>
+                                    </items>
+                                </navigationBar>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Slice01" translatesAutoresizingMaskIntoConstraints="NO" id="aCk-0D-HOO">
+                                    <rect key="frame" x="0.0" y="69" width="375" height="570"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="322.5" y="323.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Slice01" width="375" height="571"/>
+        <image name="arrow" width="13" height="23"/>
+    </resources>
+</document>
