@@ -70,7 +70,13 @@
                             <outlet property="delegate" destination="ZXE-hk-8Us" id="jNk-TR-dDh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="视频播放" id="6p3-2w-IMh"/>
+                    <navigationItem key="navigationItem" title="视频播放" id="6p3-2w-IMh">
+                        <barButtonItem key="rightBarButtonItem" title="设置" id="0px-N3-oQa">
+                            <connections>
+                                <segue destination="Wgk-p0-vS6" kind="show" id="6J1-Bx-z76"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="videoTableView" destination="LHx-hk-xud" id="CJT-Pj-BWr"/>
@@ -79,6 +85,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwM-ew-3jY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="293.5" y="486.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="f7W-kG-gHQ">
+            <objects>
+                <viewController id="Wgk-p0-vS6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fJL-sl-eYo"/>
+                        <viewControllerLayoutGuide type="bottom" id="7TE-Zr-s1x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pMn-AE-EJj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8F-yP-OzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769.5" y="486.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ogX-gA-G4v">
@@ -101,4 +125,5 @@
     <resources>
         <image name="playBtn" width="60" height="60"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
