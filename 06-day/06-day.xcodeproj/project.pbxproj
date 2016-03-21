@@ -14,6 +14,8 @@
 		06BFF0DE1C9F8A07001A2006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BFF0DC1C9F8A07001A2006 /* LaunchScreen.storyboard */; };
 		06BFF0E91C9F8A07001A2006 /* _6_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFF0E81C9F8A07001A2006 /* _6_dayTests.swift */; };
 		06BFF0F41C9F8A07001A2006 /* _6_dayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFF0F31C9F8A07001A2006 /* _6_dayUITests.swift */; };
+		06BFF1021C9F90C3001A2006 /* imageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFF1011C9F90C3001A2006 /* imageCell.swift */; };
+		06BFF1071C9F91D6001A2006 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFF1061C9F91D6001A2006 /* data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		06BFF0EF1C9F8A07001A2006 /* 06-dayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "06-dayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BFF0F31C9F8A07001A2006 /* _6_dayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _6_dayUITests.swift; sourceTree = "<group>"; };
 		06BFF0F51C9F8A07001A2006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06BFF1011C9F90C3001A2006 /* imageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageCell.swift; sourceTree = "<group>"; };
+		06BFF1061C9F91D6001A2006 /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				06BFF0D31C9F8A07001A2006 /* AppDelegate.swift */,
 				06BFF0D51C9F8A07001A2006 /* ViewController.swift */,
+				06BFF1011C9F90C3001A2006 /* imageCell.swift */,
+				06BFF1061C9F91D6001A2006 /* data.swift */,
 				06BFF0D71C9F8A07001A2006 /* Main.storyboard */,
 				06BFF0DA1C9F8A07001A2006 /* Assets.xcassets */,
 				06BFF0DC1C9F8A07001A2006 /* LaunchScreen.storyboard */,
@@ -261,6 +267,8 @@
 			files = (
 				06BFF0D61C9F8A07001A2006 /* ViewController.swift in Sources */,
 				06BFF0D41C9F8A07001A2006 /* AppDelegate.swift in Sources */,
+				06BFF1021C9F90C3001A2006 /* imageCell.swift in Sources */,
+				06BFF1071C9F91D6001A2006 /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
