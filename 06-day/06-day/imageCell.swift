@@ -15,11 +15,11 @@ class imageCell: UICollectionViewCell {
     
     var interest: data! {
         didSet {
-            updateUI()
+            updateUIs()
         }
     }
     
-    private func updateUI() {
+    private func updateUIs() {
         featureLable?.text! = interest.title
         featureImage?.image! = interest.featuredImage
     }
@@ -27,7 +27,6 @@ class imageCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         self.layer.cornerRadius = 8.0
         self.clipsToBounds = true
     }

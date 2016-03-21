@@ -74,7 +74,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="64" id="Kz2-as-3vX"/>
                                                                 </constraints>
-                                                                <blurEffect style="light"/>
+                                                                <blurEffect style="extraLight"/>
                                                             </visualEffectView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
