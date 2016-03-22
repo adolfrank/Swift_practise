@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_9_day" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jobs" translatesAutoresizingMaskIntoConstraints="NO" id="ZgQ-5g-HbS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Etr-ui-cJO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OYw-Cq-VoD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpx-To-uK6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vyv-7m-cYU">
+                                                    <rect key="frame" x="0.0" y="214" width="375" height="240"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="240" id="REF-UP-DuL"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </scrollView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lpx-To-uK6" firstAttribute="leading" secondItem="OYw-Cq-VoD" secondAttribute="leading" id="2Xx-4j-Mhh"/>
+                                        <constraint firstAttribute="trailing" secondItem="lpx-To-uK6" secondAttribute="trailing" id="6wa-jl-uR1"/>
+                                        <constraint firstAttribute="bottom" secondItem="lpx-To-uK6" secondAttribute="bottom" id="UYg-Za-i1i"/>
+                                        <constraint firstItem="lpx-To-uK6" firstAttribute="top" secondItem="OYw-Cq-VoD" secondAttribute="top" id="UZp-AK-Ppk"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZgQ-5g-HbS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KMj-39-7uL"/>
+                            <constraint firstAttribute="trailing" secondItem="ZgQ-5g-HbS" secondAttribute="trailing" id="YW5-Fy-bfR"/>
+                            <constraint firstItem="ZgQ-5g-HbS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aib-zA-2S5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Etr-ui-cJO" secondAttribute="bottom" id="fwB-U4-Y92"/>
+                            <constraint firstItem="Etr-ui-cJO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gr4-Wf-O5V"/>
+                            <constraint firstAttribute="trailing" secondItem="Etr-ui-cJO" secondAttribute="trailing" id="mKe-31-cKi"/>
+                            <constraint firstItem="Etr-ui-cJO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qcV-TV-ypd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZgQ-5g-HbS" secondAttribute="bottom" id="v6F-OQ-SiX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="scrollView" destination="lpx-To-uK6" id="BUx-gO-rc5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382.5" y="457.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jobs" width="1562" height="1168"/>
+    </resources>
+</document>
