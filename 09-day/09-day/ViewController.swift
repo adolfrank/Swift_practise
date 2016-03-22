@@ -41,8 +41,8 @@ class ViewController: UIViewController,UIScrollViewDelegate{
     private func recenterImage() {
         let scrollViewSize = scrollView.bounds.size
         let imageViewSize = imageView.frame.size
-        let horizontalSpace = imageViewSize.width < scrollViewSize.width ? (scrollViewSize.width - imageViewSize.width) / 2.0 : 0
-        let verticalSpace = imageViewSize.height < scrollViewSize.height ? (scrollViewSize.height - imageViewSize.height) / 2.0 :0
+        let horizontalSpace = (imageViewSize.width < scrollViewSize.width) ? ((scrollViewSize.width - imageViewSize.width) / 2 ) : 0
+        let verticalSpace = (imageViewSize.height < scrollViewSize.height) ? ((scrollViewSize.height - imageViewSize.height) / 2 ) : 0
         scrollView.contentInset = UIEdgeInsetsMake(verticalSpace, horizontalSpace, verticalSpace, horizontalSpace)
         
     }
