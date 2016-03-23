@@ -1,25 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="_0_day" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-secondary-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Yp2-mi-cev">
+                                <rect key="frame" x="86" y="102" width="203" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Ov0-kf-IAb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4t-cI-iSE">
+                                <rect key="frame" x="62" y="581" width="250" height="45"/>
+                                <color key="backgroundColor" red="0.15686274509803921" green="1" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="BI6-Ad-VeP"/>
+                                    <constraint firstAttribute="width" constant="250" id="UiH-TL-OYw"/>
+                                </constraints>
+                                <state key="normal" title="立即体验">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtnDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="He9-Aq-odt"/>
+                                    <segue destination="7ch-19-NHG" kind="presentation" modalTransitionStyle="crossDissolve" id="7nt-ey-6Dz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m4t-cI-iSE" secondAttribute="bottom" constant="41" id="Nfn-sv-8iF"/>
+                            <constraint firstItem="Yp2-mi-cev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZIX-fS-Qa8"/>
+                            <constraint firstItem="m4t-cI-iSE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a6K-gI-CHk"/>
+                            <constraint firstItem="Yp2-mi-cev" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="dUr-NW-eLc"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="m4t-cI-iSE" id="BpC-7S-L6u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="371.5" y="521.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zLj-GE-0ta">
+            <objects>
+                <viewController id="7ch-19-NHG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L2b-RS-cjQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="zTa-x1-HPo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fYv-xe-cLl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="我的tab" translatesAutoresizingMaskIntoConstraints="NO" id="G0P-iY-Buj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-Xo-poU">
+                                <rect key="frame" x="6" y="28" width="36" height="30"/>
+                                <connections>
+                                    <segue destination="wKg-Kg-p0a" kind="unwind" unwindAction="unwindToViewController:" id="eGp-YO-6qw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0b4-nf-WOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wKg-Kg-p0a" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="833.5" y="521.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="login-secondary-logo" width="203" height="66"/>
+        <image name="我的tab" width="750" height="1334"/>
+    </resources>
 </document>
