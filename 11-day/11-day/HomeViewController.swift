@@ -17,7 +17,7 @@ struct video {
 
 
 
-class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
+class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
 
     
     var data = [
@@ -38,16 +38,20 @@ class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         
+        
+        
     }
     
     
-    //  添加滑动返回手势
+//      添加滑动返回手势
     func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        self.view.backgroundColor = UIColor.whiteColor()
         return true
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.view.backgroundColor = UIColor.whiteColor()
+//        self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.navigationBar.alpha = 0.001
     }
     
@@ -58,6 +62,9 @@ class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.Default
     }
+    
+    
+   
     
     // MARK: - Table view data source
 
@@ -74,6 +81,7 @@ class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let aaa:UITableViewHeaderFooterView = UITableViewHeaderFooterView()
         aaa.textLabel?.text = "这是第\(section)组"
+        aaa.contentView.backgroundColor = UIColor.whiteColor()
         return aaa
     }
     
@@ -86,6 +94,10 @@ class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
         return cell
     }
     
+    
+        
 
+    
+    
   
 }

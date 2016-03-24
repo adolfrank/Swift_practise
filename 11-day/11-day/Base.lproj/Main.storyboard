@@ -115,6 +115,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hPo-Wp-5rB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="8vD-4F-ocR" kind="relationship" relationship="rootViewController" id="3iG-pK-2NG"/>

@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.whiteColor()
         
     }
 
@@ -28,9 +29,11 @@ class ProfileViewController: UIViewController {
         return UIStatusBarStyle.LightContent
     }
     
-
     
     
+    override func viewWillDisappear(animated: Bool) {
+         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 
     
 
