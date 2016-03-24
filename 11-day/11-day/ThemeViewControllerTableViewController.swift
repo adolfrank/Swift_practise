@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  ThemeViewControllerTableViewController.swift
 //  11-day
 //
 //  Created by Hongbo Yu on 16/3/24.
@@ -8,18 +8,17 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ThemeViewControllerTableViewController: UITableViewController {
 
-    @IBOutlet weak var ProfileTable: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
-        ProfileTable.delegate = self
-        ProfileTable.dataSource = self
         
     }
-
+    
+  
+    @IBOutlet var ThemeTable: UITableView!
+    
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -33,27 +32,30 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
-    
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+
+    // MARK: - Table view data source
+
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 20
     }
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = ProfileTable.dequeueReusableCellWithIdentifier("profilecell", forIndexPath: indexPath) as! ProfileTableCell
-        
-        
-        
-        return cell
-    }
 
     
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = ThemeTable.dequeueReusableCellWithIdentifier("themecell", forIndexPath: indexPath) as! ThemeTableCell
+
+        
+
+        return cell
+    }
+    
+
    
+
 }

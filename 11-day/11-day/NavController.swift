@@ -13,7 +13,6 @@ class NavController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideNavImage()
-        print("viewDidLoad - nav")
         // Do any additional setup after loading the view.
     }
 

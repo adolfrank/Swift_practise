@@ -10,9 +10,6 @@ import UIKit
 
 
 
-
-
-
 class HomeTableCell: UITableViewCell {
 
     @IBOutlet weak var titleImage: UIImageView!

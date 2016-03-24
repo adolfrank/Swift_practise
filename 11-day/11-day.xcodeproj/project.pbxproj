@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06624F5A1CA3EBD3002206EC /* ThemeViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06624F591CA3EBD3002206EC /* ThemeViewControllerTableViewController.swift */; };
+		06624F5C1CA3ED7A002206EC /* ThemeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06624F5B1CA3ED7A002206EC /* ThemeTableCell.swift */; };
+		06624F5E1CA3F1A3002206EC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06624F5D1CA3F1A3002206EC /* ProfileViewController.swift */; };
+		06624F601CA3F1EF002206EC /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06624F5F1CA3F1EF002206EC /* ProfileTableCell.swift */; };
 		06A846721CA3883700CB721F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A846711CA3883700CB721F /* AppDelegate.swift */; };
 		06A846771CA3883700CB721F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A846751CA3883700CB721F /* Main.storyboard */; };
 		06A846791CA3883700CB721F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A846781CA3883700CB721F /* Assets.xcassets */; };
 		06A8467C1CA3883700CB721F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A8467A1CA3883700CB721F /* LaunchScreen.storyboard */; };
 		06A846871CA3883700CB721F /* _1_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A846861CA3883700CB721F /* _1_dayTests.swift */; };
 		06A846921CA3883700CB721F /* _1_dayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A846911CA3883700CB721F /* _1_dayUITests.swift */; };
-		06A846A01CA38BEB00CB721F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A8469F1CA38BEB00CB721F /* ProfileViewController.swift */; };
 		06A846A21CA3984500CB721F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A846A11CA3984500CB721F /* HomeViewController.swift */; };
 		06A846A81CA3C2AB00CB721F /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A846A71CA3C2AB00CB721F /* NavController.swift */; };
 		06A846AE1CA3CD9E00CB721F /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A846AD1CA3CD9E00CB721F /* HomeTableCell.swift */; };
@@ -37,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06624F591CA3EBD3002206EC /* ThemeViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		06624F5B1CA3ED7A002206EC /* ThemeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTableCell.swift; sourceTree = "<group>"; };
+		06624F5D1CA3F1A3002206EC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		06624F5F1CA3F1EF002206EC /* ProfileTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		06A8466E1CA3883600CB721F /* 11-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "11-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A846711CA3883700CB721F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06A846761CA3883700CB721F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,7 +56,6 @@
 		06A8468D1CA3883700CB721F /* 11-dayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "11-dayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A846911CA3883700CB721F /* _1_dayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _1_dayUITests.swift; sourceTree = "<group>"; };
 		06A846931CA3883700CB721F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		06A8469F1CA38BEB00CB721F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		06A846A11CA3984500CB721F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		06A846A71CA3C2AB00CB721F /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		06A846AD1CA3CD9E00CB721F /* HomeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
@@ -106,8 +112,11 @@
 				06A846711CA3883700CB721F /* AppDelegate.swift */,
 				06A846A11CA3984500CB721F /* HomeViewController.swift */,
 				06A846AD1CA3CD9E00CB721F /* HomeTableCell.swift */,
-				06A8469F1CA38BEB00CB721F /* ProfileViewController.swift */,
+				06624F591CA3EBD3002206EC /* ThemeViewControllerTableViewController.swift */,
+				06624F5B1CA3ED7A002206EC /* ThemeTableCell.swift */,
 				06A846A71CA3C2AB00CB721F /* NavController.swift */,
+				06624F5D1CA3F1A3002206EC /* ProfileViewController.swift */,
+				06624F5F1CA3F1EF002206EC /* ProfileTableCell.swift */,
 				06A846751CA3883700CB721F /* Main.storyboard */,
 				06A846781CA3883700CB721F /* Assets.xcassets */,
 				06A8467A1CA3883700CB721F /* LaunchScreen.storyboard */,
@@ -268,10 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A846A01CA38BEB00CB721F /* ProfileViewController.swift in Sources */,
 				06A846721CA3883700CB721F /* AppDelegate.swift in Sources */,
+				06624F5A1CA3EBD3002206EC /* ThemeViewControllerTableViewController.swift in Sources */,
+				06624F601CA3F1EF002206EC /* ProfileTableCell.swift in Sources */,
 				06A846A21CA3984500CB721F /* HomeViewController.swift in Sources */,
 				06A846AE1CA3CD9E00CB721F /* HomeTableCell.swift in Sources */,
+				06624F5E1CA3F1A3002206EC /* ProfileViewController.swift in Sources */,
+				06624F5C1CA3ED7A002206EC /* ThemeTableCell.swift in Sources */,
 				06A846A81CA3C2AB00CB721F /* NavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
