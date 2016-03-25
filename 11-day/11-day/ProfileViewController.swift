@@ -20,6 +20,8 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet weak var shareBtn: UIButton!
     @IBOutlet weak var AvatarImage: UIImageView!
     @IBOutlet weak var ProfileTable: UITableView!
+   
+    
     
     @IBAction func shareBtnDidTouch(sender: AnyObject) {
         
@@ -39,32 +41,42 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
 //        optionMenu.addAction(saveAction)
         optionMenu.addAction(cancelAction)
         self.presentViewController(optionMenu, animated: true, completion: nil)
- 
-        
+  
     }
+    
+    var textToGo:String = ""
+    var imageToGo: String = ""
+    var avatarToGo: String = ""
+    
+    @IBOutlet weak var AvatarLable: UILabel!
+    
     @IBOutlet var headerImageView:UIImageView!
     @IBOutlet var headerBlurImageView:UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         self.view.backgroundColor = UIColor.whiteColor()
         ProfileTable.delegate = self
         ProfileTable.dataSource = self
         // Header - Image
+        AvatarLable.text = textToGo
+        HeaderLable.text = textToGo
+        AvatarImage.image = UIImage(named: avatarToGo)
         
         headerImageView = UIImageView(frame: Header.bounds)
         
         Header.bounds = CGRectMake(0, 0, self.view.frame.height, 200)
         ProfileTable.bounds = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
         
-        headerImageView?.image = UIImage(named: "header_bg")
+        headerImageView?.image = UIImage(named: imageToGo)
         headerImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         Header.insertSubview(headerImageView, belowSubview: HeaderLable)
         
         // Header - Blurred Image
-        
         headerBlurImageView = UIImageView(frame: Header.bounds)
-        headerBlurImageView?.image = UIImage(named: "header_bg")?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
+        headerBlurImageView?.image = UIImage(named: imageToGo)?.blurredImageWithRadius(3, iterations: 20, tintColor: UIColor.clearColor())
         headerBlurImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         headerBlurImageView?.alpha = 1
         Header.insertSubview(headerBlurImageView, belowSubview: HeaderLable)
@@ -157,7 +169,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 20
+        return 10
     }
     
     
@@ -166,8 +178,6 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return cell
     }
 
-    
    
-
    
 }

@@ -11,9 +11,9 @@ import UIKit
 class AvatarImage: UIImageView {
 
     override func awakeFromNib() {
-        self.layer.cornerRadius = 3
+        self.layer.cornerRadius = 2
         self.layer.borderColor = UIColor.whiteColor().CGColor
-        self.layer.borderWidth = 0.5
+        self.layer.borderWidth = 0
         self.clipsToBounds = true
     }
 

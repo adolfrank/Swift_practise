@@ -13,6 +13,7 @@ struct video {
     let title: String
     let subTitle: String
     let source: String
+    let avatar: String
 }
 
 
@@ -20,15 +21,16 @@ struct video {
 class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
 
     
-    var data = [
-        video(image: "screenshot01", title: "Introduce 3DS Mario", subTitle: "Youtube - 06:32", source: "video01.mp4"),
-        video(image: "screenshot02", title: "Emoji Among Us", subTitle: "Vimeo - 3:34", source: "video01.mp4"),
-        video(image: "screenshot03", title: "Seals Documentary", subTitle: "Vine - 00:06", source: "video01.mp4"),
-        video(image: "screenshot04", title: "Adventure Time", subTitle: "Youtube - 02:39", source: "video01.mp4"),
-        video(image: "screenshot05", title: "Facebook HQ", subTitle: "Facebook - 10:20", source: "video02.mp4"),
-        video(image: "screenshot06", title: "Lijiang Lugu Lake", subTitle: "Allen - 20:30", source: "video02.mp4"),
-        video(image: "screenshot07", title: "Lijiang Lugu Lake", subTitle: "Allen - 20:30", source: "video02.mp4"),
-        video(image: "screenshot08", title: "Lijiang Lugu Lake", subTitle: "Allen - 20:30", source: "video02.mp4")
+    
+    var data :[video] = [
+        video(image: "screenshot01", title: "Introduce 3DS Mario", subTitle: "Youtube - 06:32", source: "video01.mp4", avatar: "avatar01"),
+        video(image: "screenshot02", title: "Emoji Among Us", subTitle: "Vimeo - 3:34", source: "video01.mp4", avatar: "avatar02"),
+        video(image: "screenshot03", title: "Seals Documentary", subTitle: "Vine - 00:06", source: "video01.mp4", avatar: "avatar03"),
+        video(image: "screenshot04", title: "Adventure Time", subTitle: "Youtube - 02:39", source: "video01.mp4", avatar: "avatar04"),
+        video(image: "screenshot05", title: "Facebook HQ", subTitle: "Facebook - 10:20", source: "video02.mp4", avatar: "avatar05"),
+        video(image: "screenshot06", title: "Lijiang Lugu Lake", subTitle: "Allen - 20:30", source: "video02.mp4", avatar: "avatar06"),
+        video(image: "screenshot07", title: "Lijiang Lugu Lake", subTitle: "Allen - 20:30", source: "video02.mp4", avatar: "avatar07"),
+        video(image: "screenshot08", title: "Lijiang Lugu Lake", subTitle: "Allen - 20:30", source: "video02.mp4", avatar: "avatar08")
     ]
     
     
@@ -37,9 +39,6 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
-        
-        
     }
     
     
@@ -70,12 +69,12 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
+        return 3
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 8
+        return data.count
     }
 
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -95,6 +94,21 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
     }
     
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ProfileSegue" {
+            let toView = segue.destinationViewController as! ProfileViewController
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+            toView.textToGo = data[indexPath.row].title
+            toView.imageToGo = data[indexPath.row].image
+            toView.avatarToGo = data[indexPath.row].avatar
+            
+        }
+        
+    }
     
     
   
