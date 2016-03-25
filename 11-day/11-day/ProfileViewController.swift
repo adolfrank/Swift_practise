@@ -8,9 +8,9 @@
 
 import UIKit
 
-let offset_HeaderStop:CGFloat = 40.0 // At this offset the Header stops its transformations
-let offset_B_LabelHeader:CGFloat = 125.0 // At this offset the Black label reaches the Header
-let distance_W_LabelHeader:CGFloat = 35.0 // The distance between the bottom of the Header and the top of the White Label
+let offset_HeaderStop:CGFloat = 136 // 背景图片与导航栏的高度差   At this offset the Header stops its transformations
+let offset_B_LabelHeader:CGFloat = 134 // 控制标题出现的Y值 At this offset the Black label reaches the Header
+let distance_W_LabelHeader:CGFloat = 45 // 控制标题最终位置的Y值 The distance between the bottom of the Header and the top of the White Label
 
 class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -22,7 +22,6 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     @IBOutlet var headerImageView:UIImageView!
     @IBOutlet var headerBlurImageView:UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +38,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
         // Header - Blurred Image
         
         headerBlurImageView = UIImageView(frame: Header.bounds)
-        //        headerBlurImageView?.image = UIImage(named: "header_bg")?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
+        headerBlurImageView?.image = UIImage(named: "header_bg")?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
         headerBlurImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         headerBlurImageView?.alpha = 0.0
         Header.insertSubview(headerBlurImageView, belowSubview: HeaderLable)
@@ -59,9 +58,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
         var headerTransform = CATransform3DIdentity
         
         // PULL DOWN -----------------
-        
         if offset <= 0 {
-            
             let headerScaleFactor:CGFloat = -(offset) / Header.bounds.height
             let headerSizevariation = ((Header.bounds.height * (1.0 + headerScaleFactor)) - Header.bounds.height)/2.0
             headerTransform = CATransform3DTranslate(headerTransform, 0, headerSizevariation, 0)
@@ -69,20 +66,15 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
             
             Header.layer.transform = headerTransform
         }
-            
             // SCROLL UP/DOWN ------------
-            
         else {
             
             // Header -----------
-            
             headerTransform = CATransform3DTranslate(headerTransform, 0, max(-offset_HeaderStop, -offset), 0)
             
             //  ------------ Label
-            
-//            let labelTransform = CATransform3DMakeTranslation(0, max(-distance_W_LabelHeader, offset_B_LabelHeader - offset), 0)
-//            HeaderLable.layer.transform = labelTransform
-
+            let labelTransform = CATransform3DMakeTranslation(0, max(-distance_W_LabelHeader, offset_B_LabelHeader - offset), 0)
+            HeaderLable.layer.transform = labelTransform
             
             //  ------------ 返回按钮顶置
             let backBtnTrasform = CATransform3DMakeTranslation(0, 0, 10)
@@ -90,22 +82,17 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
             
             //  ------------ Blur
-            
             headerBlurImageView?.alpha = min (1.0, (offset - offset_B_LabelHeader)/distance_W_LabelHeader)
             
             // Avatar -----------
-            
             let avatarScaleFactor = (min(offset_HeaderStop, offset)) / AvatarImage.bounds.height / 1.4 // Slow down the animation
             let avatarSizeVariation = ((AvatarImage.bounds.height * (1.0 + avatarScaleFactor)) - AvatarImage.bounds.height) / 2.0
             avatarTransform = CATransform3DTranslate(avatarTransform, 0, avatarSizeVariation, 0)
             avatarTransform = CATransform3DScale(avatarTransform, 1.0 - avatarScaleFactor, 1.0 - avatarScaleFactor, 0)
-            
             if offset <= offset_HeaderStop {
-                
                 if AvatarImage.layer.zPosition < Header.layer.zPosition{
                     Header.layer.zPosition = 0
                 }
-                
             }else {
                 if AvatarImage.layer.zPosition >= Header.layer.zPosition{
                     Header.layer.zPosition = 2

@@ -142,10 +142,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rt-0O-2v1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zS2-fr-dzg">
-                                        <rect key="frame" x="167" y="104" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adolfrank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zS2-fr-dzg">
+                                        <rect key="frame" x="151" y="210" width="74" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -153,8 +153,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="zS2-fr-dzg" firstAttribute="top" secondItem="9Rt-0O-2v1" secondAttribute="top" constant="104" id="0no-l5-Xqz"/>
-                                    <constraint firstAttribute="height" constant="107" id="2gg-YN-cZH"/>
+                                    <constraint firstItem="zS2-fr-dzg" firstAttribute="top" secondItem="9Rt-0O-2v1" secondAttribute="top" constant="210" id="0no-l5-Xqz"/>
+                                    <constraint firstAttribute="height" constant="200" id="2gg-YN-cZH"/>
                                     <constraint firstItem="zS2-fr-dzg" firstAttribute="centerX" secondItem="9Rt-0O-2v1" secondAttribute="centerX" id="ugy-AR-wee"/>
                                 </constraints>
                             </view>
@@ -163,18 +163,24 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="kuG-Hm-iiN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="adolfrank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMn-sN-Qxe">
+                                            <rect key="frame" x="40" y="210" width="72" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="hGa-ak-Udq" customClass="AvatarImage" customModule="_1_day" customModuleProvider="target">
-                                            <rect key="frame" x="135" y="88" width="104" height="128"/>
+                                            <rect key="frame" x="135" y="103" width="104" height="128"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profilecell" rowHeight="81" id="68a-Yh-bMY" customClass="ProfileTableCell" customModule="_1_day" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="266" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="314" width="375" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="68a-Yh-bMY" id="3Yv-9I-11q">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>

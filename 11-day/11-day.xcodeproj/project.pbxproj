@@ -12,7 +12,6 @@
 		06624F5C1CA3ED7A002206EC /* ThemeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06624F5B1CA3ED7A002206EC /* ThemeTableCell.swift */; };
 		06624F5E1CA3F1A3002206EC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06624F5D1CA3F1A3002206EC /* ProfileViewController.swift */; };
 		06624F601CA3F1EF002206EC /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06624F5F1CA3F1EF002206EC /* ProfileTableCell.swift */; };
-		06624F641CA3F552002206EC /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06624F631CA3F552002206EC /* FXBlurView.m */; };
 		06A846721CA3883700CB721F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A846711CA3883700CB721F /* AppDelegate.swift */; };
 		06A846771CA3883700CB721F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A846751CA3883700CB721F /* Main.storyboard */; };
 		06A846791CA3883700CB721F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A846781CA3883700CB721F /* Assets.xcassets */; };
@@ -22,6 +21,7 @@
 		06A846A21CA3984500CB721F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A846A11CA3984500CB721F /* HomeViewController.swift */; };
 		06A846A81CA3C2AB00CB721F /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A846A71CA3C2AB00CB721F /* NavController.swift */; };
 		06A846AE1CA3CD9E00CB721F /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A846AD1CA3CD9E00CB721F /* HomeTableCell.swift */; };
+		06AA9BE61CA4E50A007EEF32 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA9BE51CA4E50A007EEF32 /* FXBlurView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +47,6 @@
 		06624F5B1CA3ED7A002206EC /* ThemeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTableCell.swift; sourceTree = "<group>"; };
 		06624F5D1CA3F1A3002206EC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		06624F5F1CA3F1EF002206EC /* ProfileTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
-		06624F621CA3F552002206EC /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
-		06624F631CA3F552002206EC /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		06A8466E1CA3883600CB721F /* 11-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "11-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A846711CA3883700CB721F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06A846761CA3883700CB721F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +62,9 @@
 		06A846A11CA3984500CB721F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		06A846A71CA3C2AB00CB721F /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		06A846AD1CA3CD9E00CB721F /* HomeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		06AA9BE41CA4E50A007EEF32 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		06AA9BE51CA4E50A007EEF32 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		06AA9BE71CA4E578007EEF32 /* TB_TwitterHeader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TB_TwitterHeader-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,15 +92,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06624F611CA3F552002206EC /* FXBlurView */ = {
-			isa = PBXGroup;
-			children = (
-				06624F621CA3F552002206EC /* FXBlurView.h */,
-				06624F631CA3F552002206EC /* FXBlurView.m */,
-			);
-			path = FXBlurView;
-			sourceTree = "<group>";
-		};
 		06A846651CA3883600CB721F = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +128,8 @@
 				06A846781CA3883700CB721F /* Assets.xcassets */,
 				06A8467A1CA3883700CB721F /* LaunchScreen.storyboard */,
 				06A8467D1CA3883700CB721F /* Info.plist */,
-				06624F611CA3F552002206EC /* FXBlurView */,
+				06AA9BE71CA4E578007EEF32 /* TB_TwitterHeader-Bridging-Header.h */,
+				06AA9BE31CA4E50A007EEF32 /* FXBlurView */,
 			);
 			path = "11-day";
 			sourceTree = "<group>";
@@ -157,6 +150,15 @@
 				06A846931CA3883700CB721F /* Info.plist */,
 			);
 			path = "11-dayUITests";
+			sourceTree = "<group>";
+		};
+		06AA9BE31CA4E50A007EEF32 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				06AA9BE41CA4E50A007EEF32 /* FXBlurView.h */,
+				06AA9BE51CA4E50A007EEF32 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,9 +302,9 @@
 				06A846AE1CA3CD9E00CB721F /* HomeTableCell.swift in Sources */,
 				06624F5E1CA3F1A3002206EC /* ProfileViewController.swift in Sources */,
 				064B0D1B1CA4CA4A00FDFF98 /* AvatarImage.swift in Sources */,
+				06AA9BE61CA4E50A007EEF32 /* FXBlurView.m in Sources */,
 				06624F5C1CA3ED7A002206EC /* ThemeTableCell.swift in Sources */,
 				06A846A81CA3C2AB00CB721F /* NavController.swift in Sources */,
-				06624F641CA3F552002206EC /* FXBlurView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "11-day/Info.plist";
@@ -451,6 +454,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "im.youyu.-1-day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "11-day/TB_TwitterHeader-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "11-day/Info.plist";
@@ -465,6 +472,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "im.youyu.-1-day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "11-day/TB_TwitterHeader-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 			};
 			name = Release;
 		};
