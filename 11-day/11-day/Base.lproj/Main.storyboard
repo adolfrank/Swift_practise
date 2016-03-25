@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--主页-->
+        <!--Home View Controller-->
         <scene sceneID="KgE-ib-hFs">
             <objects>
                 <tableViewController id="8vD-4F-ocR" customClass="HomeViewController" customModule="_1_day" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,8 +54,21 @@
                             <outlet property="delegate" destination="8vD-4F-ocR" id="A8O-y2-GLv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="主页" id="olL-oX-zju">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Pde-c0-P4o">
+                    <navigationItem key="navigationItem" id="olL-oX-zju">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="InF-zO-ye8">
+                            <rect key="frame" x="113" y="6" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIA-P5-pcx">
+                                    <rect key="frame" x="17" y="2" width="117" height="30"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" image="youyu_logo"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" image="searchBtn" id="Pde-c0-P4o">
                             <connections>
                                 <segue destination="hT9-9Y-LId" kind="push" id="NJb-It-qh1"/>
                             </connections>
@@ -173,17 +186,24 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSY-5g-5Ix">
-                                <rect key="frame" x="10" y="25" width="40" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSY-5g-5Ix">
+                                <rect key="frame" x="6" y="25" width="40" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="CNu-Kb-uMB"/>
                                     <constraint firstAttribute="height" constant="30" id="a7E-XC-9JN"/>
                                 </constraints>
-                                <state key="normal" title="Back">
+                                <state key="normal" image="backBtn">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="backBtnDidTouch:" destination="WSj-TY-tRC" eventType="touchUpInside" id="hjm-sp-P3G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNA-2B-GiM">
+                                <rect key="frame" x="340" y="29" width="21" height="23"/>
+                                <state key="normal" image="shareBtn"/>
+                                <connections>
+                                    <action selector="shareBtnDidTouch:" destination="WSj-TY-tRC" eventType="touchUpInside" id="fYX-sI-69w"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xt9-fK-rHX">
@@ -264,14 +284,16 @@
                             <constraint firstAttribute="trailing" secondItem="9Rt-0O-2v1" secondAttribute="trailing" id="I3G-L4-icp"/>
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="leading" secondItem="bJK-qm-K4v" secondAttribute="leading" id="JME-kj-vbd"/>
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="top" secondItem="bJK-qm-K4v" secondAttribute="top" id="QFd-Zz-JfB"/>
+                            <constraint firstItem="QNA-2B-GiM" firstAttribute="top" secondItem="9HD-5Y-Huc" secondAttribute="bottom" constant="9" id="QoW-E1-6X1"/>
                             <constraint firstItem="xt9-fK-rHX" firstAttribute="top" secondItem="bJK-qm-K4v" secondAttribute="top" id="SQF-lz-U1M"/>
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="top" secondItem="xt9-fK-rHX" secondAttribute="top" id="Zwg-R0-a5Y"/>
                             <constraint firstAttribute="trailing" secondItem="xt9-fK-rHX" secondAttribute="trailing" id="dHl-Ci-AUl"/>
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="top" secondItem="bJK-qm-K4v" secondAttribute="top" id="dlG-06-1FX"/>
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="trailing" secondItem="xt9-fK-rHX" secondAttribute="trailing" id="frq-Xn-fHq"/>
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="leading" secondItem="xt9-fK-rHX" secondAttribute="leading" id="j67-GX-RuP"/>
-                            <constraint firstItem="VSY-5g-5Ix" firstAttribute="leading" secondItem="bJK-qm-K4v" secondAttribute="leading" constant="10" id="jcu-9x-5eS"/>
+                            <constraint firstItem="VSY-5g-5Ix" firstAttribute="leading" secondItem="bJK-qm-K4v" secondAttribute="leading" constant="6" id="jcu-9x-5eS"/>
                             <constraint firstItem="VSY-5g-5Ix" firstAttribute="top" secondItem="9HD-5Y-Huc" secondAttribute="bottom" constant="5" id="mbo-rG-PEC"/>
+                            <constraint firstAttribute="trailing" secondItem="QNA-2B-GiM" secondAttribute="trailing" constant="14" id="o9o-45-dm3"/>
                             <constraint firstAttribute="trailing" secondItem="9Rt-0O-2v1" secondAttribute="trailing" id="qNR-wL-PXM"/>
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="width" secondItem="xt9-fK-rHX" secondAttribute="width" id="tHa-jK-n5H"/>
                         </constraints>
@@ -297,6 +319,7 @@
                         <outlet property="HeaderLable" destination="zS2-fr-dzg" id="HRB-dK-z4p"/>
                         <outlet property="ProfileTable" destination="xt9-fK-rHX" id="w2E-Pc-vWa"/>
                         <outlet property="backBtn" destination="VSY-5g-5Ix" id="VdR-V7-iGg"/>
+                        <outlet property="shareBtn" destination="QNA-2B-GiM" id="8GF-LX-w4U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbF-Eq-UZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -323,6 +346,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backBtn" width="11" height="18"/>
         <image name="profile" width="175" height="175"/>
+        <image name="searchBtn" width="20" height="20"/>
+        <image name="shareBtn" width="21" height="23"/>
+        <image name="youyu_logo" width="47" height="22"/>
     </resources>
 </document>

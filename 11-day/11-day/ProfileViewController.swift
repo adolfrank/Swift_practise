@@ -17,9 +17,31 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet var Header: UIView!
     @IBOutlet weak var HeaderLable: UILabel!
+    @IBOutlet weak var shareBtn: UIButton!
     @IBOutlet weak var AvatarImage: UIImageView!
     @IBOutlet weak var ProfileTable: UITableView!
     
+    @IBAction func shareBtnDidTouch(sender: AnyObject) {
+        
+        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+        })
+//        let saveAction = UIAlertAction(title: "Save", style: .Default, handler: {
+//            (alert: UIAlertAction!) -> Void in
+//        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+        })
+        optionMenu.addAction(deleteAction)
+//        optionMenu.addAction(saveAction)
+        optionMenu.addAction(cancelAction)
+        self.presentViewController(optionMenu, animated: true, completion: nil)
+ 
+        
+    }
     @IBOutlet var headerImageView:UIImageView!
     @IBOutlet var headerBlurImageView:UIImageView!
     
@@ -48,6 +70,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
         Header.insertSubview(headerBlurImageView, belowSubview: HeaderLable)
         Header.clipsToBounds = true
         self.view.bringSubviewToFront(backBtn)
+        self.view.bringSubviewToFront(shareBtn)
         }
 
     @IBAction func backBtnDidTouch(sender: AnyObject) {
@@ -80,8 +103,9 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
             HeaderLable.layer.transform = labelTransform
             
             //  ------------ 返回按钮顶置
-            let backBtnTrasform = CATransform3DMakeTranslation(0, 0, 10)
-            backBtn.layer.transform = backBtnTrasform
+            let navBtnTrasform = CATransform3DMakeTranslation(0, 0, 10)
+            backBtn.layer.transform = navBtnTrasform
+            shareBtn.layer.transform = navBtnTrasform
 
             
             //  ------------ Blur

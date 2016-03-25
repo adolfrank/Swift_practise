@@ -80,7 +80,7 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
 
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let aaa:UITableViewHeaderFooterView = UITableViewHeaderFooterView()
-        aaa.textLabel?.text = "这是第\(section)组"
+        aaa.textLabel?.text = ""
         aaa.contentView.backgroundColor = UIColor.whiteColor()
         return aaa
     }

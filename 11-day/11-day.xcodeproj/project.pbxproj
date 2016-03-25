@@ -65,6 +65,7 @@
 		06AA9BE41CA4E50A007EEF32 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		06AA9BE51CA4E50A007EEF32 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		06AA9BE71CA4E578007EEF32 /* TB_TwitterHeader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TB_TwitterHeader-Bridging-Header.h"; sourceTree = "<group>"; };
+		06AA9BF01CA5157E007EEF32 /* shareMenu.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = shareMenu.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		06A8468A1CA3883700CB721F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06AA9BED1CA5157E007EEF32 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -108,6 +116,7 @@
 				06A8466E1CA3883600CB721F /* 11-day.app */,
 				06A846821CA3883700CB721F /* 11-dayTests.xctest */,
 				06A8468D1CA3883700CB721F /* 11-dayUITests.xctest */,
+				06AA9BF01CA5157E007EEF32 /* shareMenu.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,21 +124,13 @@
 		06A846701CA3883700CB721F /* 11-day */ = {
 			isa = PBXGroup;
 			children = (
-				06A846711CA3883700CB721F /* AppDelegate.swift */,
-				06A846A11CA3984500CB721F /* HomeViewController.swift */,
-				06A846AD1CA3CD9E00CB721F /* HomeTableCell.swift */,
-				06624F591CA3EBD3002206EC /* ThemeViewControllerTableViewController.swift */,
-				06624F5B1CA3ED7A002206EC /* ThemeTableCell.swift */,
-				06A846A71CA3C2AB00CB721F /* NavController.swift */,
-				06624F5D1CA3F1A3002206EC /* ProfileViewController.swift */,
-				06624F5F1CA3F1EF002206EC /* ProfileTableCell.swift */,
-				064B0D1A1CA4CA4A00FDFF98 /* AvatarImage.swift */,
+				06AA9BEB1CA4FD40007EEF32 /* Other */,
+				06AA9BEA1CA4FD32007EEF32 /* Controller */,
+				06AA9BE91CA4FD2A007EEF32 /* Model */,
+				06AA9BE81CA4FD1D007EEF32 /* View */,
 				06A846751CA3883700CB721F /* Main.storyboard */,
-				06A846781CA3883700CB721F /* Assets.xcassets */,
 				06A8467A1CA3883700CB721F /* LaunchScreen.storyboard */,
-				06A8467D1CA3883700CB721F /* Info.plist */,
-				06AA9BE71CA4E578007EEF32 /* TB_TwitterHeader-Bridging-Header.h */,
-				06AA9BE31CA4E50A007EEF32 /* FXBlurView */,
+				06A846781CA3883700CB721F /* Assets.xcassets */,
 			);
 			path = "11-day";
 			sourceTree = "<group>";
@@ -159,6 +160,46 @@
 				06AA9BE51CA4E50A007EEF32 /* FXBlurView.m */,
 			);
 			path = FXBlurView;
+			sourceTree = "<group>";
+		};
+		06AA9BE81CA4FD1D007EEF32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06A846AD1CA3CD9E00CB721F /* HomeTableCell.swift */,
+				06624F5B1CA3ED7A002206EC /* ThemeTableCell.swift */,
+				06624F5F1CA3F1EF002206EC /* ProfileTableCell.swift */,
+				064B0D1A1CA4CA4A00FDFF98 /* AvatarImage.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		06AA9BE91CA4FD2A007EEF32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		06AA9BEA1CA4FD32007EEF32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06A846A71CA3C2AB00CB721F /* NavController.swift */,
+				06624F591CA3EBD3002206EC /* ThemeViewControllerTableViewController.swift */,
+				06A846A11CA3984500CB721F /* HomeViewController.swift */,
+				06624F5D1CA3F1A3002206EC /* ProfileViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		06AA9BEB1CA4FD40007EEF32 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				06A8467D1CA3883700CB721F /* Info.plist */,
+				06A846711CA3883700CB721F /* AppDelegate.swift */,
+				06AA9BE71CA4E578007EEF32 /* TB_TwitterHeader-Bridging-Header.h */,
+				06AA9BE31CA4E50A007EEF32 /* FXBlurView */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +258,23 @@
 			productReference = 06A8468D1CA3883700CB721F /* 11-dayUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		06AA9BEF1CA5157E007EEF32 /* shareMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06AA9BFB1CA5157F007EEF32 /* Build configuration list for PBXNativeTarget "shareMenu" */;
+			buildPhases = (
+				06AA9BEC1CA5157E007EEF32 /* Sources */,
+				06AA9BED1CA5157E007EEF32 /* Frameworks */,
+				06AA9BEE1CA5157E007EEF32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = shareMenu;
+			productName = shareMenu;
+			productReference = 06AA9BF01CA5157E007EEF32 /* shareMenu.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -241,6 +299,10 @@
 						DevelopmentTeam = L2528U33FA;
 						TestTargetID = 06A8466D1CA3883600CB721F;
 					};
+					06AA9BEF1CA5157E007EEF32 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = L2528U33FA;
+					};
 				};
 			};
 			buildConfigurationList = 06A846691CA3883600CB721F /* Build configuration list for PBXProject "11-day" */;
@@ -259,6 +321,7 @@
 				06A8466D1CA3883600CB721F /* 11-day */,
 				06A846811CA3883700CB721F /* 11-dayTests */,
 				06A8468C1CA3883700CB721F /* 11-dayUITests */,
+				06AA9BEF1CA5157E007EEF32 /* shareMenu */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +345,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		06A8468B1CA3883700CB721F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06AA9BEE1CA5157E007EEF32 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,6 +391,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				06A846921CA3883700CB721F /* _1_dayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06AA9BEC1CA5157E007EEF32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +600,32 @@
 			};
 			name = Release;
 		};
+		06AA9BFC1CA5157F007EEF32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = shareMenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "im.youyu.-1-day.shareMenu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		06AA9BFD1CA5157F007EEF32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = shareMenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "im.youyu.-1-day.shareMenu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -558,6 +661,15 @@
 			buildConfigurations = (
 				06A8469D1CA3883700CB721F /* Debug */,
 				06A8469E1CA3883700CB721F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06AA9BFB1CA5157F007EEF32 /* Build configuration list for PBXNativeTarget "shareMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06AA9BFC1CA5157F007EEF32 /* Debug */,
+				06AA9BFD1CA5157F007EEF32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
