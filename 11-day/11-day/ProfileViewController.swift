@@ -9,8 +9,8 @@
 import UIKit
 
 let offset_HeaderStop:CGFloat = 136 // 背景图片与导航栏的高度差   At this offset the Header stops its transformations
-let offset_B_LabelHeader:CGFloat = 134 // 控制标题出现的Y值 At this offset the Black label reaches the Header
-let distance_W_LabelHeader:CGFloat = 45 // 控制标题最终位置的Y值 The distance between the bottom of the Header and the top of the White Label
+let offset_B_LabelHeader:CGFloat = 165 // 控制标题出现的Y值 At this offset the Black label reaches the Header
+let distance_W_LabelHeader:CGFloat = 43 // 控制标题最终位置的Y值 The distance between the bottom of the Header and the top of the White Label
 
 class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -31,6 +31,10 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
         // Header - Image
         
         headerImageView = UIImageView(frame: Header.bounds)
+        
+        Header.bounds = CGRectMake(0, 0, self.view.frame.height, 200)
+        ProfileTable.bounds = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        
         headerImageView?.image = UIImage(named: "header_bg")
         headerImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         Header.insertSubview(headerImageView, belowSubview: HeaderLable)
@@ -40,7 +44,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
         headerBlurImageView = UIImageView(frame: Header.bounds)
         headerBlurImageView?.image = UIImage(named: "header_bg")?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
         headerBlurImageView?.contentMode = UIViewContentMode.ScaleAspectFill
-        headerBlurImageView?.alpha = 0.0
+        headerBlurImageView?.alpha = 1
         Header.insertSubview(headerBlurImageView, belowSubview: HeaderLable)
         Header.clipsToBounds = true
         
@@ -82,7 +86,8 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
             
             //  ------------ Blur
-            headerBlurImageView?.alpha = min (1.0, (offset - offset_B_LabelHeader)/distance_W_LabelHeader)
+//            headerBlurImageView?.alpha = min (1.0, (offset - offset_B_LabelHeader)/distance_W_LabelHeader)
+            
             
             // Avatar -----------
             let avatarScaleFactor = (min(offset_HeaderStop, offset)) / AvatarImage.bounds.height / 1.4 // Slow down the animation
