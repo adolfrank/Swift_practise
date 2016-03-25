@@ -173,8 +173,12 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSY-5g-5Ix">
-                                <rect key="frame" x="10" y="25" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSY-5g-5Ix">
+                                <rect key="frame" x="10" y="25" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="CNu-Kb-uMB"/>
+                                    <constraint firstAttribute="height" constant="30" id="a7E-XC-9JN"/>
+                                </constraints>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -266,6 +270,8 @@
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="top" secondItem="bJK-qm-K4v" secondAttribute="top" id="dlG-06-1FX"/>
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="trailing" secondItem="xt9-fK-rHX" secondAttribute="trailing" id="frq-Xn-fHq"/>
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="leading" secondItem="xt9-fK-rHX" secondAttribute="leading" id="j67-GX-RuP"/>
+                            <constraint firstItem="VSY-5g-5Ix" firstAttribute="leading" secondItem="bJK-qm-K4v" secondAttribute="leading" constant="10" id="jcu-9x-5eS"/>
+                            <constraint firstItem="VSY-5g-5Ix" firstAttribute="top" secondItem="9HD-5Y-Huc" secondAttribute="bottom" constant="5" id="mbo-rG-PEC"/>
                             <constraint firstAttribute="trailing" secondItem="9Rt-0O-2v1" secondAttribute="trailing" id="qNR-wL-PXM"/>
                             <constraint firstItem="9Rt-0O-2v1" firstAttribute="width" secondItem="xt9-fK-rHX" secondAttribute="width" id="tHa-jK-n5H"/>
                         </constraints>

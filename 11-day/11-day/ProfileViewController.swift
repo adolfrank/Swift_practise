@@ -47,12 +47,11 @@ class ProfileViewController: UIViewController,UITableViewDelegate,UITableViewDat
         headerBlurImageView?.alpha = 1
         Header.insertSubview(headerBlurImageView, belowSubview: HeaderLable)
         Header.clipsToBounds = true
-        
+        self.view.bringSubviewToFront(backBtn)
         }
 
     @IBAction func backBtnDidTouch(sender: AnyObject) {
-        
-        print("backBtnDidTouch")
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
