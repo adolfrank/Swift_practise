@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 struct video {
     let image: String
     let title: String
@@ -18,11 +17,8 @@ struct video {
 }
 
 
-
 class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
 
-
-    
     @IBOutlet var HomeTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +26,12 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
     }
     
     
-//      添加滑动返回手势
+    // MARK: - 添加滑动返回手势，别忘了加上 UIGestureRecognizerDelegate 代理方法
     func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
         self.view.backgroundColor = UIColor.whiteColor()
         return true
     }
+    
     
     override func viewWillAppear(animated: Bool) {
         self.view.backgroundColor = UIColor.whiteColor()
@@ -54,7 +51,6 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
    
     
     // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 3
@@ -64,14 +60,6 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
         // #warning Incomplete implementation, return the number of rows
         return data.count
     }
-
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let aaa:UITableViewHeaderFooterView = UITableViewHeaderFooterView()
-        aaa.textLabel?.text = ""
-        aaa.contentView.backgroundColor = UIColor.whiteColor()
-        return aaa
-    }
-    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = HomeTable.dequeueReusableCellWithIdentifier("homecell", forIndexPath: indexPath) as! HomeTableCell
@@ -82,10 +70,18 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
     }
     
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+    // MARK: - 设置表格的表头样式，可自定义
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let aaa:UITableViewHeaderFooterView = UITableViewHeaderFooterView()
+        aaa.textLabel?.text = ""
+        aaa.contentView.backgroundColor = UIColor.whiteColor()
+        return aaa
     }
     
     
+    
+    // MARK: - 在此方法中设置要通过push传递的数据，并在目标控制器中设置对应的变量接受此方法中传递的数据
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ProfileSegue" {
             let toView = segue.destinationViewController as! ProfileViewController
@@ -93,11 +89,7 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
             toView.textToGo = data[indexPath.row].title
             toView.imageToGo = data[indexPath.row].image
             toView.avatarToGo = data[indexPath.row].avatar
-            
         }
-        
     }
     
-    
-  
 }

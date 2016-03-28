@@ -9,6 +9,8 @@
 import UIKit
 
 
+// MARK: 这里存放数据－数组
+
 var data :[video] = [
     video(image: "screenshot01", title: "Introduce 3DS Mario", subTitle: "Youtube - 06:32", source: "video01.mp4", avatar: "avatar01"),
     video(image: "screenshot02", title: "Emoji Among Us", subTitle: "Vimeo - 3:34", source: "video01.mp4", avatar: "avatar02"),

@@ -49,9 +49,6 @@ class ThemeViewControllerTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = ThemeTable.dequeueReusableCellWithIdentifier("themecell", forIndexPath: indexPath) as! ThemeTableCell
-
-        
-
         return cell
     }
     
