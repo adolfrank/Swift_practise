@@ -1,15 +1,15 @@
 //
-//  _3_dayTests.swift
-//  13-dayTests
+//  teteTests.swift
+//  teteTests
 //
-//  Created by Hongbo Yu on 16/3/28.
-//  Copyright © 2016年 Frank. All rights reserved.
+//  Created by Adolfrank on 3/27/16.
+//  Copyright © 2016 FrankAdol. All rights reserved.
 //
 
 import XCTest
-@testable import _3_day
+@testable import tete
 
-class _3_dayTests: XCTestCase {
+class teteTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

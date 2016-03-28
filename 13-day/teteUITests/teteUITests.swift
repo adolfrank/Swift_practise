@@ -1,14 +1,14 @@
 //
-//  _3_dayUITests.swift
-//  13-dayUITests
+//  teteUITests.swift
+//  teteUITests
 //
-//  Created by Hongbo Yu on 16/3/28.
-//  Copyright © 2016年 Frank. All rights reserved.
+//  Created by Adolfrank on 3/27/16.
+//  Copyright © 2016 FrankAdol. All rights reserved.
 //
 
 import XCTest
 
-class _3_dayUITests: XCTestCase {
+class teteUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
