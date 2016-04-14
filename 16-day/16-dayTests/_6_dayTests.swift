@@ -2,7 +2,7 @@
 //  _6_dayTests.swift
 //  16-dayTests
 //
-//  Created by Hongbo Yu on 16/4/14.
+//  Created by Hongbo Yu on 16/4/12.
 //  Copyright © 2016年 Frank. All rights reserved.
 //
 
