@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  14-day
 //
-//  Created by Hongbo Yu on 16/4/14.
-//  Copyright © 2016年 Frank. All rights reserved.
+//  Created by Adolfrank on 4/9/16.
+//  Copyright © 2016 FrankAdol. All rights reserved.
 //
 
 import UIKit
@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 
 }
 
