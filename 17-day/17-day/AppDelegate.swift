@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         
         let imageView = UIImageView(frame: self.window!.frame)
-        imageView.image = UIImage(named: "splash")
+//        imageView.image = UIImage(named: "splash")
+        imageView.backgroundColor = UIColor.redColor()
         VC.view.insertSubview(imageView, atIndex: 10)
         
         self.mask = CALayer()
@@ -64,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        self.imageView!.layer.mask = nil
+//        self.imageView!.layer.mask = nil
         self.imageView?.removeFromSuperview()
         
     }
