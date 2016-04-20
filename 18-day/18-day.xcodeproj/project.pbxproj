@@ -14,6 +14,11 @@
 		06A783901CC7599B00A8B715 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A7838E1CC7599B00A8B715 /* LaunchScreen.storyboard */; };
 		06A7839B1CC7599B00A8B715 /* _8_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A7839A1CC7599B00A8B715 /* _8_dayTests.swift */; };
 		06A783A61CC7599B00A8B715 /* _8_dayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A783A51CC7599B00A8B715 /* _8_dayUITests.swift */; };
+		06A783B41CC7624400A8B715 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A783B31CC7624400A8B715 /* HomeViewController.swift */; };
+		06A783B61CC7625B00A8B715 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A783B51CC7625B00A8B715 /* MenuViewController.swift */; };
+		06A783B81CC7628300A8B715 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A783B71CC7628300A8B715 /* HomeTableCell.swift */; };
+		06A783BA1CC7629200A8B715 /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A783B91CC7629200A8B715 /* MenuTableCell.swift */; };
+		06A783BC1CC7685500A8B715 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A783BB1CC7685500A8B715 /* MenuTransitionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		06A783A11CC7599B00A8B715 /* 18-dayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "18-dayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A783A51CC7599B00A8B715 /* _8_dayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _8_dayUITests.swift; sourceTree = "<group>"; };
 		06A783A71CC7599B00A8B715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06A783B31CC7624400A8B715 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		06A783B51CC7625B00A8B715 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		06A783B71CC7628300A8B715 /* HomeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		06A783B91CC7629200A8B715 /* MenuTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableCell.swift; sourceTree = "<group>"; };
+		06A783BB1CC7685500A8B715 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,11 @@
 			children = (
 				06A783851CC7599A00A8B715 /* AppDelegate.swift */,
 				06A783871CC7599B00A8B715 /* ViewController.swift */,
+				06A783BB1CC7685500A8B715 /* MenuTransitionManager.swift */,
+				06A783B31CC7624400A8B715 /* HomeViewController.swift */,
+				06A783B71CC7628300A8B715 /* HomeTableCell.swift */,
+				06A783B51CC7625B00A8B715 /* MenuViewController.swift */,
+				06A783B91CC7629200A8B715 /* MenuTableCell.swift */,
 				06A783891CC7599B00A8B715 /* Main.storyboard */,
 				06A7838C1CC7599B00A8B715 /* Assets.xcassets */,
 				06A7838E1CC7599B00A8B715 /* LaunchScreen.storyboard */,
@@ -260,7 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				06A783881CC7599B00A8B715 /* ViewController.swift in Sources */,
+				06A783BA1CC7629200A8B715 /* MenuTableCell.swift in Sources */,
 				06A783861CC7599B00A8B715 /* AppDelegate.swift in Sources */,
+				06A783B41CC7624400A8B715 /* HomeViewController.swift in Sources */,
+				06A783B81CC7628300A8B715 /* HomeTableCell.swift in Sources */,
+				06A783BC1CC7685500A8B715 /* MenuTransitionManager.swift in Sources */,
+				06A783B61CC7625B00A8B715 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
