@@ -51,7 +51,7 @@ class HomeTableController: UITableViewController, RefreshViewDelegate {
  
     
     func refreshviewDidRefresh(refreshView: RefreshView) {
-        sleep(1)
+        sleep(3)
         cunstumRefresh.endRefresh()
     }
 

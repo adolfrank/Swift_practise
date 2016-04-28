@@ -14,6 +14,8 @@ protocol RefreshViewDelegate: class {
 
 private let kScreenHeight: CGFloat = 120.0
 
+
+
 class RefreshView: UIView, UIScrollViewDelegate {
     
     private unowned var scrollView: UIScrollView
@@ -75,13 +77,31 @@ class RefreshView: UIView, UIScrollViewDelegate {
         }
     }
     
+    
+    
     func beginRefresh() {
         isRefreshing = true
         UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseOut, animations: {
             self.scrollView.contentInset.top += kScreenHeight
             }) { (true) in
         }
+        let cape = refreshItems[3].view
+        let cat = refreshItems[4].view
+        cape.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI/32))
+        cat.transform = CGAffineTransformMakeTranslation(1.0, 0)
+        UIView.animateWithDuration(0.2, delay: 0, options: .Repeat, animations: {
+            cape.transform = CGAffineTransformMakeRotation(CGFloat(M_PI/32))
+            cat.transform = CGAffineTransformMakeTranslation(-1.0, 0)
+            }, completion: nil)
+        // 有问题，这段动画无法执行
+//        let buildings = refreshItems[0].view
+//        let ground = refreshItems[2].view
+//        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut , animations: {
+//            ground.center.y += kScreenHeight
+//            buildings.center.y += kScreenHeight
+//        }){ (true) in }
     }
+    
     
     func endRefresh() {
         UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseOut, animations: {
@@ -89,7 +109,13 @@ class RefreshView: UIView, UIScrollViewDelegate {
         }) { (true) in
             self.isRefreshing = false
         }
+        let cape = refreshItems[3].view
+        let cat = refreshItems[4].view
+        cape.transform = CGAffineTransformIdentity
+        cat.transform = CGAffineTransformIdentity
+        cape.layer.removeAllAnimations()
     }
+    
     
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
