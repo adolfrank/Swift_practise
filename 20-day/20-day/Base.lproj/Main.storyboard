@@ -14,13 +14,86 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4ub-db-kZY">
+                                <rect key="frame" x="20" y="44" width="335" height="211"/>
+                                <color key="backgroundColor" red="0.92848557692307687" green="0.92848557692307687" blue="0.92848557692307687" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="211" id="OiI-hA-lk8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psl-QS-GOc">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-XK-7s4">
+                                        <rect key="frame" x="0.0" y="14" width="64" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="3fh-1O-lDL"/>
+                                            <constraint firstAttribute="height" constant="22" id="7jK-CO-Kih"/>
+                                        </constraints>
+                                        <state key="normal" image="Camera"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uij-gc-lhj">
+                                        <rect key="frame" x="332" y="15" width="29" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="nh5-sg-JP6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfJ-GU-ICN">
+                                        <rect key="frame" x="72" y="13" width="37" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="37" id="Eh5-oT-Dl2"/>
+                                            <constraint firstAttribute="height" constant="25" id="l5h-dV-4A7"/>
+                                        </constraints>
+                                        <state key="normal" image="Search"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95833333333333337" green="0.95833333333333337" blue="0.95833333333333337" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="uij-gc-lhj" firstAttribute="top" secondItem="psl-QS-GOc" secondAttribute="top" constant="15" id="7MF-u1-eKZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="wfJ-GU-ICN" secondAttribute="bottom" constant="11" id="Ap7-Ze-k0T"/>
+                                    <constraint firstItem="wfJ-GU-ICN" firstAttribute="top" secondItem="psl-QS-GOc" secondAttribute="top" constant="13" id="IeG-iZ-1y6"/>
+                                    <constraint firstItem="hwv-XK-7s4" firstAttribute="top" secondItem="psl-QS-GOc" secondAttribute="top" constant="14" id="PIY-iS-zCr"/>
+                                    <constraint firstItem="wfJ-GU-ICN" firstAttribute="leading" secondItem="hwv-XK-7s4" secondAttribute="trailing" constant="8" id="SpG-ka-z2A"/>
+                                    <constraint firstAttribute="bottom" secondItem="uij-gc-lhj" secondAttribute="bottom" constant="13" id="WHB-xz-Uxf"/>
+                                    <constraint firstAttribute="trailing" secondItem="uij-gc-lhj" secondAttribute="trailing" constant="14" id="fGg-q5-N34"/>
+                                    <constraint firstAttribute="height" constant="49" id="mmR-tI-zTS"/>
+                                    <constraint firstItem="hwv-XK-7s4" firstAttribute="leading" secondItem="psl-QS-GOc" secondAttribute="leading" id="nmz-Vu-R0T"/>
+                                    <constraint firstAttribute="bottom" secondItem="hwv-XK-7s4" secondAttribute="bottom" constant="13" id="ntE-Xw-hwV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ub-db-kZY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="9c8-Mg-xsY"/>
+                            <constraint firstItem="psl-QS-GOc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QEM-Il-Gki"/>
+                            <constraint firstItem="4ub-db-kZY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="TdL-lV-9VW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="psl-QS-GOc" secondAttribute="bottom" id="hrf-qf-rWH"/>
+                            <constraint firstAttribute="trailing" secondItem="psl-QS-GOc" secondAttribute="trailing" id="n3c-TZ-ki2"/>
+                            <constraint firstAttribute="trailing" secondItem="4ub-db-kZY" secondAttribute="trailing" constant="20" id="zB1-SD-L2u"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bottomBar" destination="psl-QS-GOc" id="mNi-On-JsW"/>
+                        <outlet property="charCountLable" destination="uij-gc-lhj" id="IYh-6v-3p5"/>
+                        <outlet property="textFieldView" destination="4ub-db-kZY" id="yUv-Be-wnp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="438.5" y="474.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="24" height="21"/>
+        <image name="Search" width="24" height="25"/>
+    </resources>
 </document>
