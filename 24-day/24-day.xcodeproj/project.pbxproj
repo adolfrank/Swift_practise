@@ -14,6 +14,10 @@
 		06F832841CD991D5009A40F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F832821CD991D5009A40F8 /* LaunchScreen.storyboard */; };
 		06F8328F1CD991D5009A40F8 /* _4_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F8328E1CD991D5009A40F8 /* _4_dayTests.swift */; };
 		06F8329A1CD991D5009A40F8 /* _4_dayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F832991CD991D5009A40F8 /* _4_dayUITests.swift */; };
+		06F832AA1CD995B5009A40F8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F832A91CD995B5009A40F8 /* SWRevealViewController.m */; };
+		06F832AC1CD998C4009A40F8 /* BackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F832AB1CD998C4009A40F8 /* BackViewController.swift */; };
+		06F832AE1CD99A40009A40F8 /* FriendRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F832AD1CD99A40009A40F8 /* FriendRead.swift */; };
+		06F832B01CD99A6C009A40F8 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F832AF1CD99A6C009A40F8 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,12 @@
 		06F832951CD991D5009A40F8 /* 24-dayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "24-dayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F832991CD991D5009A40F8 /* _4_dayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4_dayUITests.swift; sourceTree = "<group>"; };
 		06F8329B1CD991D5009A40F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F832A71CD995B4009A40F8 /* 24-day-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "24-day-Bridging-Header.h"; sourceTree = "<group>"; };
+		06F832A81CD995B5009A40F8 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		06F832A91CD995B5009A40F8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		06F832AB1CD998C4009A40F8 /* BackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackViewController.swift; sourceTree = "<group>"; };
+		06F832AD1CD99A40009A40F8 /* FriendRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRead.swift; sourceTree = "<group>"; };
+		06F832AF1CD99A6C009A40F8 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +110,15 @@
 				06F832791CD991D5009A40F8 /* AppDelegate.swift */,
 				06F8327B1CD991D5009A40F8 /* ViewController.swift */,
 				06F8327D1CD991D5009A40F8 /* Main.storyboard */,
+				06F832AF1CD99A6C009A40F8 /* Article.swift */,
+				06F832AD1CD99A40009A40F8 /* FriendRead.swift */,
+				06F832AB1CD998C4009A40F8 /* BackViewController.swift */,
 				06F832801CD991D5009A40F8 /* Assets.xcassets */,
+				06F832A81CD995B5009A40F8 /* SWRevealViewController.h */,
+				06F832A91CD995B5009A40F8 /* SWRevealViewController.m */,
 				06F832821CD991D5009A40F8 /* LaunchScreen.storyboard */,
 				06F832851CD991D5009A40F8 /* Info.plist */,
+				06F832A71CD995B4009A40F8 /* 24-day-Bridging-Header.h */,
 			);
 			path = "24-day";
 			sourceTree = "<group>";
@@ -260,7 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F8327C1CD991D5009A40F8 /* ViewController.swift in Sources */,
+				06F832AE1CD99A40009A40F8 /* FriendRead.swift in Sources */,
+				06F832B01CD99A6C009A40F8 /* Article.swift in Sources */,
 				06F8327A1CD991D5009A40F8 /* AppDelegate.swift in Sources */,
+				06F832AA1CD995B5009A40F8 /* SWRevealViewController.m in Sources */,
+				06F832AC1CD998C4009A40F8 /* BackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,10 +422,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "24-day/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "im.youyu.-4-day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "24-day/24-day-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -413,10 +436,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "24-day/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "im.youyu.-4-day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "24-day/24-day-Bridging-Header.h";
 			};
 			name = Release;
 		};
