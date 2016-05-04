@@ -18,7 +18,7 @@ class BackViewController: UITableViewController {
         TableArrary = ["FriendRead", "Article"]
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
         self.tableView.separatorColor = UIColor(red:0.159, green:0.156, blue:0.181, alpha:1)
-        self.view.backgroundColor = UIColor.blackColor()
+        self.view.backgroundColor = UIColor.darkGrayColor()
     }
 
     
@@ -26,7 +26,9 @@ class BackViewController: UITableViewController {
         return true
     }
     
-    
+    override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
+        return UIStatusBarAnimation.Slide
+    }
 
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

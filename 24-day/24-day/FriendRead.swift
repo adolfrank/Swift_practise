@@ -13,7 +13,7 @@ class FriendRead: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBarHidden = true
+//        self.navigationController?.navigationBarHidden = true
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
         // Uncomment the following line to preserve selection between presentations
