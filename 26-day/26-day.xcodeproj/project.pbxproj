@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		068B3E241CFC115D00F038EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B3E231CFC115D00F038EA /* AppDelegate.swift */; };
-		068B3E261CFC115D00F038EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B3E251CFC115D00F038EA /* ViewController.swift */; };
 		068B3E291CFC115D00F038EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068B3E271CFC115D00F038EA /* Main.storyboard */; };
 		068B3E2C1CFC115D00F038EA /* _6_day.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 068B3E2A1CFC115D00F038EA /* _6_day.xcdatamodeld */; };
 		068B3E2E1CFC115E00F038EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 068B3E2D1CFC115E00F038EA /* Assets.xcassets */; };
 		068B3E311CFC115E00F038EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068B3E2F1CFC115E00F038EA /* LaunchScreen.storyboard */; };
 		068B3E3C1CFC115E00F038EA /* _6_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B3E3B1CFC115E00F038EA /* _6_dayTests.swift */; };
 		068B3E471CFC115E00F038EA /* _6_dayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B3E461CFC115E00F038EA /* _6_dayUITests.swift */; };
+		068B3E551CFC14D500F038EA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B3E541CFC14D500F038EA /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		068B3E201CFC115D00F038EA /* 26-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "26-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		068B3E231CFC115D00F038EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		068B3E251CFC115D00F038EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		068B3E281CFC115D00F038EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		068B3E2B1CFC115D00F038EA /* _6_day.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _6_day.xcdatamodel; sourceTree = "<group>"; };
 		068B3E2D1CFC115E00F038EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		068B3E421CFC115E00F038EA /* 26-dayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "26-dayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		068B3E461CFC115E00F038EA /* _6_dayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _6_dayUITests.swift; sourceTree = "<group>"; };
 		068B3E481CFC115E00F038EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		068B3E541CFC14D500F038EA /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				068B3E231CFC115D00F038EA /* AppDelegate.swift */,
-				068B3E251CFC115D00F038EA /* ViewController.swift */,
+				068B3E541CFC14D500F038EA /* TableViewController.swift */,
 				068B3E271CFC115D00F038EA /* Main.storyboard */,
 				068B3E2D1CFC115E00F038EA /* Assets.xcassets */,
 				068B3E2F1CFC115E00F038EA /* LaunchScreen.storyboard */,
@@ -263,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				068B3E2C1CFC115D00F038EA /* _6_day.xcdatamodeld in Sources */,
-				068B3E261CFC115D00F038EA /* ViewController.swift in Sources */,
+				068B3E551CFC14D500F038EA /* TableViewController.swift in Sources */,
 				068B3E241CFC115D00F038EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
